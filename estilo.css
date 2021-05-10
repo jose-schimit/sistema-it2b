@@ -25,3 +25,9 @@
     font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+@media (max-width:900px) {
+    .table{
+        width: 100%;
+    }
+}
