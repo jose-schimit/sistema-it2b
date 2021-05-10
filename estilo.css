@@ -27,7 +27,8 @@
 }
 
 @media (max-width:900px) {
-    .table{
+    .table,.header,.txt{
         width: 100%;
     }
+    
 }
