@@ -1,11 +1,12 @@
 .header{
-    width: 30%;
+    width: 40%;
     height: 50px;
     background-color: black;
     color: white;
     line-height: normal;
     font-size: 18pt;
     text-align: center;
+    margin-top: 10px;
 }
 .txt{
     float: left;
@@ -19,13 +20,17 @@
 }
 .table{
     color: white;
-    width: 30%;
+    width: 40%;
     background-color: rgb(119, 11, 190);
     text-align: center;
     font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-@media (max-width:850px) {
+.contaner{
+    width: 95%;
+    margin: 0 auto;
+}
+@media (max-width:1200px) {
     .table,.header,.txt{
         width: 100%;
     } 
