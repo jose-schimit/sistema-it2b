@@ -83,9 +83,9 @@ function atendimento(){
     }
 }
 
-
+lista = [];
 function salvar(){
-    lista = [];
+    lista = new Array;
     nome = document.getElementById("tecnico");
     estado = document.getElementById("status");
     tecnico = document.getElementById("tec");
@@ -97,23 +97,38 @@ function salvar(){
 
     //console.log(n_chamado,nome_tecnico,status_chamado);
     if(n_chamado != "" && nome_tecnico != "" && status_chamado != ""){
-        for (let i = 0; i < lista.length; i++) {
-            if(lista[i] == "Daniel"){
-                lista.push(nome_tecnico);
-                lista.push(n_chamado);
-                lista.push(status_chamado);
+       
+        
+        lista.push(nome_tecnico);
+        lista.push(n_chamado);
+        lista.push(status_chamado);
+
+        row = atendimentos.insertRow(); // cria a linha
+        cell1 = row.insertCell(); // cria uma célula na linha
+        cell2 = row.insertCell(); // cria uma célula na linha
+        cell3 = row.insertCell();// cria uma célula na linha
+        cell1.innerHTML = lista[0] // na célula passa o valor 
+        cell2.innerHTML = lista[1] // na célula passa o valor  
+        cell3.innerHTML = lista[2] // na célula passa o valor 
+
+        cell4 = row.insertCell();// cria uma célula na linha
+        //cell4.innerHTML = "Excluir" // na célula passa o valor 
     
-                row = atendimentos.insertRow(); // cria a linha
-                cell1 = row.insertCell(); // cria uma célula na linha
-                cell2 = row.insertCell(); // cria uma célula na linha
-                cell3 = row.insertCell();// cria uma célula na linha
-                cell1.innerHTML = lista[0] // na célula passa o valor 
-                cell2.innerHTML = lista[1] // na célula passa o valor  
-                cell3.innerHTML = lista[2] // na célula passa o valor   
-            }
-            console.log(lista[i]);
+        var btn = document.createElement('BUTTON');
+        btn.style.backgroundColor = "red";
+        btn.style.color = "white";
+        btn.style.padding = "3px";
+        var lbl = document.createTextNode("Excluir");        
+        btn.appendChild(lbl);   
+        btn.onclick = function()
+        {
+          
         }
+        cell4.appendChild(btn);
+    
+        console.log(lista[0]);
     }
+    
     //console.log(lista[0]);
 }
 
