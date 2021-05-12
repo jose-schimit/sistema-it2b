@@ -2,30 +2,85 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Fila de atendimentos IT2B</title>
+        <title>Fila de atendimentos it2b</title>
         <script src="atender.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="estilo.css">
     </head>
-    <body onload="atendimento()">  
+    <body onload="atendimento()" onunload="salvar()">  
         <div class="contaner">
             <div class="lista">
-                <h2>Fila de atendimento IT2B</h2>
+                <div class="titulo">
+                    <h2>Fila de atendimento IT2B</h2>
+                </div>
                 <div class="header" id="data">
                 
                 </div>
+
                 <table id="dados" class="table col-md-4">
-                    </thead id="dados">
+                    <thead id="dados">
                         <tr>
                            
                        </tr>
+                    </thead>
                 </table>
             </div>
 
             <div class="form">
                 <form>
-                   
+                    <div class="input mb-3">
+                        <label for="tecnico">Tecnico</label><br>
+                        <select class="custom-select" id="tecnico">                            
+                            <option selected value="1">Daniel</option>
+                            <option value="2">Felipe</option>
+                            <option value="3">Fhelipe</option>
+                            <option value="4">Rodolfo</option>
+                            <option value="5">Wagner</option>
+                            <option value="6">Wallace</option>
+
+                            <option value="7">Alisson</option>
+                            <option value="8">Erik</option>
+                            <option value="9">Humberto</option>
+                            <option value="10">Jose Alfredo</option>
+                            <option value="11">Jose Schimit</option>
+                            <option value="12">Lucca</option>
+                        </select>
+                    </div>
+
+                    <div class="input mb-3">
+                        <span id="inputGroup-sizing-default">Id chamado</span>
+                        <input type="number" class="form-control" id="chamado" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Id chamado">
+                    </div>
+                    
+                    <div class="input mb-3">
+                        <label for="status">Status</label>
+                        <select class="custom-select" id="status">
+                            <option value="1">Agendado</option>
+                            <option value="2">Encaminhado</option>
+                            <option selected value="3">Fechado</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-success" style="width: 30%;" onclick="salvar()">Salvar</button>
+                    </div>
                 </form>
+                <div class="menu">
+                    <ul>
+                        <li>Tecnico</li>
+                        <li>Id chamado</li>
+                        <li>Status</li>
+                    </ul>
+                 </div>
+                <div class="tabela">
+                    <table id="lista_atendimentos" class="table">
+                        <thead>
+                            <tr>
+                               
+                           </tr>
+                        </thead>
+                    </table>
+                    
+                </div>
             </div>
         </div>
        

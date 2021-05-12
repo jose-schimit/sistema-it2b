@@ -8,16 +8,14 @@ function atendimento(){
 
     d = new Date();
     dia_semana = semana[d.getDay()];
-    // var n = d.getHours();
-    //m = d.getMonth();
     data = (dia_semana + " - " +(d.getDate() )) + "/" +"0"+((d.getMonth() +1)) + "/" + d.getFullYear(); 
 
     dia = d.getDate();
-    console.log(dia);
 
     tamanho = tecnico_9.length -1;                      
     tabela = document.getElementById("dados");
-    date = document.getElementById("data");                               
+    date = document.getElementById("data"); 
+
     row = "";
     cell1 = "";
     cell2 ="";
@@ -50,7 +48,6 @@ function atendimento(){
     }                                                        
 
     function listar(){ 
-
         row2 = tabela.insertRow(); // cria a linha
         cell3 = row2.insertCell(); // cria uma célula na linha
         cell4 = row2.insertCell(); // cria uma célula na linha
@@ -63,7 +60,6 @@ function atendimento(){
         cell4.style.color = "white";
         
         for (let i = 0; i < tecnico_9.length; i++) {
-            
             row = tabela.insertRow(); // cria a linha
             cell1 = row.insertCell(); // cria uma célula na linha
             cell2 = row.insertCell(); // cria uma célula na linha
@@ -85,6 +81,39 @@ function atendimento(){
             tecnico_10[i] = tecnico10[i];
         }  
     }
+}
 
+
+function salvar(){
+    lista = [];
+    nome = document.getElementById("tecnico");
+    estado = document.getElementById("status");
+    tecnico = document.getElementById("tec");
+    atendimentos = document.getElementById("lista_atendimentos");
+
+    n_chamado = document.getElementById("chamado").value;
+    nome_tecnico = nome.options[nome.selectedIndex].text;
+    status_chamado = estado.options[estado.selectedIndex].text;
+
+    //console.log(n_chamado,nome_tecnico,status_chamado);
+    if(n_chamado != "" && nome_tecnico != "" && status_chamado != ""){
+        for (let i = 0; i < lista.length; i++) {
+            if(lista[i] == "Daniel"){
+                lista.push(nome_tecnico);
+                lista.push(n_chamado);
+                lista.push(status_chamado);
+    
+                row = atendimentos.insertRow(); // cria a linha
+                cell1 = row.insertCell(); // cria uma célula na linha
+                cell2 = row.insertCell(); // cria uma célula na linha
+                cell3 = row.insertCell();// cria uma célula na linha
+                cell1.innerHTML = lista[0] // na célula passa o valor 
+                cell2.innerHTML = lista[1] // na célula passa o valor  
+                cell3.innerHTML = lista[2] // na célula passa o valor   
+            }
+            console.log(lista[i]);
+        }
+    }
+    //console.log(lista[0]);
 }
 
