@@ -1,12 +1,16 @@
-.header{
+*{margin: 0; padding: 0; box-sizing: border-box;}
+.lista{
+    float: left;
     width: 40%;
-    height: 50px;
+}
+.header{
+    width: 100%;
+    height: 30px;
     background-color: black;
     color: white;
     line-height: normal;
     font-size: 18pt;
     text-align: center;
-    margin-top: 10px;
 }
 .txt{
     float: left;
@@ -20,7 +24,7 @@
 }
 .table{
     color: white;
-    width: 40%;
+    width: 1000%;
     background-color: rgb(119, 11, 190);
     text-align: center;
     font-weight: bold;
@@ -30,8 +34,17 @@
     width: 95%;
     margin: 0 auto;
 }
+.form{
+    float: left;
+    width: 50%;
+    margin-left: 10px;
+}
 @media (max-width:1200px) {
-    .table,.header,.txt{
+    .lista{
+        width: 100%;
+    }
+    .form{
+        margin-left: 0;
         width: 100%;
     } 
 }
