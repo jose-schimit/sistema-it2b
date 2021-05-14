@@ -23,15 +23,15 @@ function atendimento(){
     date.innerHTML = data;
 
     //dia = 17;
-    if(dia == 11){
+    if(dia == 19){
     listar();                     
     }
     atualizar();
-    if(dia == 12){
+    if(dia == 20){
         listar();
     }
     atualizar()
-    if(dia == 13){
+    if(dia == 21){
         listar();
     }
     atualizar()
@@ -83,9 +83,7 @@ function atendimento(){
     }
 }
 
-lista = [];
 function salvar(){
-    lista = new Array;
     nome = document.getElementById("tecnico");
     estado = document.getElementById("status");
     tecnico = document.getElementById("tec");
@@ -95,13 +93,25 @@ function salvar(){
     n_chamado = document.getElementById("chamado").value; 
     status_chamado = estado.options[estado.selectedIndex].text;
 
-    //console.log(n_chamado,nome_tecnico,status_chamado);
+    lista = '{"nome":"jose","idade":"28","sexo":"M"}'
+    listajson = JSON.parse(lista);
+    for (const lis in listajson) {
+        console.log(lis)
+    }
+    console.log(listajson.sexo)
+
     if(n_chamado != "" && nome_tecnico != "" && status_chamado != ""){
        
+        ArquivoJson = '{';
+            ArquivoJson += '"Tecnico:" "' + nome_tecnico +'",';
+            ArquivoJson += '"chamado:" "' + n_chamado +'",';
+            ArquivoJson += '"status:" "' + status_chamado +'",';
+        ArquivoJson += '}';
         
-        lista.push(nome_tecnico);
-        lista.push(n_chamado);
-        lista.push(status_chamado);
+
+        blob = new Blob([ArquivoJson],{type:"txt/plain;charset=utf8"})
+        //saveAs(blob,"ListAtendimento"+".json");
+        
 
         row = atendimentos.insertRow(); // cria a linha
         cell1 = row.insertCell(); // cria uma célula na linha
@@ -138,7 +148,6 @@ function salvar(){
             console.log(conf)
            
         }
-        
     }
     
     //console.log(lista[0]);
