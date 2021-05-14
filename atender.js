@@ -91,8 +91,8 @@ function salvar(){
     tecnico = document.getElementById("tec");
     atendimentos = document.getElementById("lista_atendimentos");
 
-    n_chamado = document.getElementById("chamado").value;
     nome_tecnico = nome.options[nome.selectedIndex].text;
+    n_chamado = document.getElementById("chamado").value; 
     status_chamado = estado.options[estado.selectedIndex].text;
 
     //console.log(n_chamado,nome_tecnico,status_chamado);
@@ -107,9 +107,9 @@ function salvar(){
         cell1 = row.insertCell(); // cria uma célula na linha
         cell2 = row.insertCell(); // cria uma célula na linha
         cell3 = row.insertCell();// cria uma célula na linha
-        cell1.innerHTML = lista[0] // na célula passa o valor 
-        cell2.innerHTML = lista[1] // na célula passa o valor  
-        cell3.innerHTML = lista[2] // na célula passa o valor 
+        cell1.innerHTML = nome_tecnico // na célula passa o valor 
+        cell2.innerHTML = n_chamado // na célula passa o valor  
+        cell3.innerHTML = status_chamado // na célula passa o valor 
 
         
         cell4 = row.insertCell();// cria uma célula na linha
