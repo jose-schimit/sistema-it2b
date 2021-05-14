@@ -86,12 +86,16 @@
         </div>
 
         <button id="teste">Teste</button>
+        <input type="text" id="nome">
         <p id="p"></p>
         <script>
             $('#teste').click(function(){
-               x =  document.getElementById("p");
-                x.innserHtml = "Ola mundo";
+                //alert("HOHOHO")
+                nome = document.getElementById("nome") 
+                n = nome.value;
+                document.getElementById("teste").innerHTML = n
             });
+            
            
         </script>
        

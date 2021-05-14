@@ -130,8 +130,13 @@ function salvar(){
 
         btn.onclick = function()
         {
-            var tecnico = $(this).parent().parent(); //tr
-            tecnico.remove();   
+            conf = confirm("Deseja realmente excluir esse registro?")
+            if(conf){
+                var tecnico = $(this).parent().parent(); //tr
+                tecnico.remove();   
+            }
+            console.log(conf)
+           
         }
         
     }
