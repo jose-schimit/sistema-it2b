@@ -1,7 +1,7 @@
 function atendimento(){
     semana = ["Domingo","Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"]
-    tecnico_9 = ["Daniel","Felipe","Fhelipe","Rodolfo","Wagner","Wallace"];
-    tecnico_10 = ["Alisson","Erik","Humberto","Jose Alfredo","Jose Schimit","Lucca"];
+    tecnico_9 = ["Wagner"];
+    tecnico_10 = ["Alisson","Erik","Humberto","Jose Schimit","Lucca"];
 
     tecnico09 = new Array();
     tecnico10 = new Array();
