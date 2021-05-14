@@ -111,24 +111,41 @@ function salvar(){
         cell2.innerHTML = lista[1] // na célula passa o valor  
         cell3.innerHTML = lista[2] // na célula passa o valor 
 
+        
         cell4 = row.insertCell();// cria uma célula na linha
-        //cell4.innerHTML = "Excluir" // na célula passa o valor 
-    
-        var btn = document.createElement('BUTTON');
-        btn.style.backgroundColor = "red";
-        btn.style.color = "white";
-        btn.style.padding = "3px";
-        var lbl = document.createTextNode("Excluir");        
-        btn.appendChild(lbl);   
+        btn = document.createElement('BUTTON');//Adiciona um botão
+
+        //estilo do botão
+        btn.style.backgroundColor = "white";
+        btn.style.color = "red";
+        btn.style.padding = "1px 3px";
+        btn.style.border = "none";
+        btn.style.borderRadius = "5px";
+        btn.style.cursor = "pointer";
+
+
+        texto_botão = document.createTextNode("Excluir");//Define o texto do botão     
+        btn.appendChild(texto_botão);// Adicona texto no botão  
+        cell4.appendChild(btn);//Adiciona o botão na celula
+
         btn.onclick = function()
         {
-          
+            var tecnico = $(this).parent().parent(); //tr
+            tecnico.remove();   
         }
-        cell4.appendChild(btn);
-    
-        console.log(lista[0]);
+        
     }
     
     //console.log(lista[0]);
 }
+
+
+
+
+
+
+
+
+
+
 

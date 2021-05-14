@@ -7,7 +7,8 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="estilo.css">
     </head>
-    <body onload="atendimento()" onunload="salvar()">  
+    <body onload="atendimento()" onunload="salvar()"> 
+        <script src="jquery.js"></script> 
         <div class="contaner">
             <div class="lista">
                 <div class="titulo">
@@ -83,6 +84,22 @@
                 </div>
             </div>
         </div>
+
+        <button id="teste">Teste</button>
+        <p id="p"></p>
+        <script>
+            $('#teste').click(function(){
+               x =  document.getElementById("p");
+                x.innserHtml = "Ola mundo";
+            });
+           
+        </script>
        
     </body>
 </html>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous">
+</script>
