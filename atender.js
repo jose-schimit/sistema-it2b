@@ -59,7 +59,7 @@ function atendimento(){
         cell3.style.color = "white";
         cell4.style.color = "white";
         
-        for (let i = 0; i < tecnico_9.length; i++) {
+        for (let i = 0; i < tecnico_10.length; i++) {
             row = tabela.insertRow(); // cria a linha
             cell1 = row.insertCell(); // cria uma célula na linha
             cell2 = row.insertCell(); // cria uma célula na linha
@@ -71,7 +71,7 @@ function atendimento(){
     function atualizar(){
         num_9 = tecnico_9[0];
         num_10 = tecnico_10[0];
-        for (let i = 0; i < tecnico_9.length; i++) {
+        for (let i = 0; i < tecnico_10.length; i++) {
             tecnico09[i] = tecnico_9[i+1];
             tecnico09[tamanho] = num_9;
             tecnico_9[i] = tecnico09[i];
