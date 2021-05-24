@@ -36,6 +36,8 @@
     background-color: rgb(119, 11, 190);
     text-align: center;
     font-weight: bold;
+    height: 300px;
+    overflow: scroll;
 }
 .contaner{
     width: 95%;
@@ -44,29 +46,44 @@
 .form{
     float: left;
     width: 55%;
+    height: 355px;
     margin-left: 10px;
     background-color: blue;
-}
+}   
+
 .form form{
     float: left;
     width: 40%;
     padding: 5px;
     background-color: gray;
+    height: 355px;
 }
 .tabela{
-    float: left;
-    width: 60%;
+    width: 100%;
 }
+.espaco-baixo{
+    padding-bottom: 10px;
+}
+
 .menu{
-    background-color: red;
-    text-align: center;
+    background-color: #ccc;
     height: 50px;
     line-height: 50px;
+    padding: 0 0px;
 }
 .menu ul li{
     display: inline;
-    margin-right:45px;
+    margin-right:0px;
     font-size: 15pt;
+    margin-right: 20px;
+    margin-left: 8px;
+}
+.tabela_atendimento{
+    background-color: #ddd;
+    float: left;
+    width: 60%;
+    height: 355px;
+    overflow-y: scroll;
 }
 
 @media (max-width:1200px) {

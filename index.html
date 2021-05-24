@@ -29,7 +29,7 @@
 
             <div class="form">
                 <form>
-                    <div class="input mb-3">
+                    <div class="input mb-3 espaco-baixo">
                         <label for="tecnico">Tecnico</label><br>
                         <select class="custom-select" id="tecnico">                            
                             <option selected value="1">Daniel</option>
@@ -48,12 +48,12 @@
                         </select>
                     </div>
 
-                    <div class="input mb-3">
+                    <div class="input mb-3 espaco-baixo">
                         <span id="inputGroup-sizing-default">Id chamado</span>
                         <input type="number" class="form-control" id="chamado" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Id chamado">
                     </div>
                     
-                    <div class="input mb-3">
+                    <div class="input mb-3 espaco-baixo">
                         <label for="status">Status</label>
                         <select class="custom-select" id="status">
                             <option value="1">Agendado</option>
@@ -61,47 +61,39 @@
                             <option selected value="3">Fechado</option>
                         </select>
                     </div>
-                    <div>
+                    <div class="espaco-baixo">
                         <button type="button" class="btn btn-success" style="width: 30%;" onclick="salvar()">Salvar</button>
                     </div>
                 </form>
-                <div class="menu">
-                    <ul>
-                        <li>Tecnico</li>
-                        <li>Id chamado</li>
-                        <li>Status</li>
-                    </ul>
-                 </div>
-                <div class="tabela" id="">
-                    <table id="lista_atendimentos" class="table">
-                        <thead>
-                            <tr>
-                               
-                           </tr>
-                        </thead>
-                    </table>
-                    
-                </div>
-            </div>
-        </div>
 
-        <button id="teste">Teste</button>
-        <input type="text" id="nome">
-        <p id="p"></p>
-        <script>
-            $('#teste').click(function(){
-                //alert("HOHOHO")
-                nome = document.getElementById("nome") 
-                n = nome.value;
-                document.getElementById("teste").innerHTML = n
-            });
+                <div class="tabela_atendimento">
+                    <div class="menu">
+                        <ul>
+                            <li>Tecnico</li>
+                            <li>Id chamado</li>
+                            <li>Status</li>
+                            <li >Ação</li>
+                        </ul>
+                        </div>
+                    <div class="tabela" id="">
+                        <table id="lista_atendimentos" class="table">
+                            <thead>
+                                <tr>
+                                    
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+
+          
             
-           
-        </script>
-       
+        </div>       
     </body>
 </html>
-<script src="FileSaver.js"></script>
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="

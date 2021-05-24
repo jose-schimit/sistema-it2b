@@ -1,7 +1,7 @@
 function atendimento(){
     semana = ["Domingo","Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"]
-    tecnico_9 = ["Wagner"];
-    tecnico_10 = ["Alisson","Erik","Humberto","Jose Schimit","Lucca"];
+    tecnico_9 = [];
+    tecnico_10 = ["Jose Schimit","Lucca","Erik","Humberto","Jose Schimit","Lucca","Erik","Humberto"];
 
     tecnico09 = new Array();
     tecnico10 = new Array();
@@ -12,7 +12,7 @@ function atendimento(){
 
     dia = d.getDate();
 
-    tamanho = tecnico_9.length -1;                      
+    tamanho = tecnico_10.length -1;                      
     tabela = document.getElementById("dados");
     date = document.getElementById("data"); 
 
