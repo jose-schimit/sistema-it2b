@@ -1,7 +1,7 @@
 function atendimento(){
     semana = ["Domingo","Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"]
     tecnico_9 = [];
-    tecnico_10 = ["Jose Schimit","Lucca","Erik","Humberto","Jose Schimit","Lucca","Erik","Humberto"];
+    tecnico_10 = ["Jose Schimit","Lucca","Alison","Erik","Humberto"];
 
     tecnico09 = new Array();
     tecnico10 = new Array();
@@ -23,27 +23,27 @@ function atendimento(){
     date.innerHTML = data;
 
     //dia = 17;
-    if(dia == 19){
+    if(dia == 25){
     listar();                     
     }
     atualizar();
-    if(dia == 20){
+    if(dia == 26){
         listar();
     }
     atualizar()
-    if(dia == 21){
+    if(dia == 27){
         listar();
     }
     atualizar()
-    if(dia == 14){
+    if(dia == 28){
         listar();
     }
     atualizar()
-    if(dia == 17){
+    if(dia == 29){
         listar();
     }
     atualizar()
-    if(dia == 18){
+    if(dia == 24){
         listar();
     }                                                        
 
